@@ -1,0 +1,18 @@
+# ~/.config/starship.toml
+add_newline = true
+
+[username]
+style_user = "bold green"
+show_always = true
+
+[directory]
+truncation_length = 3
+style = "bold blue"
+
+[git_branch]
+symbol = "🌱 "
+style = "bold purple"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
