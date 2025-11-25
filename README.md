@@ -41,7 +41,8 @@ I use this repository to back up and synchronize my **Hyprland** setup across di
 Clone the repository:
 
 ```bash
-git clone git@github.com:AntonioSertic23/dotfiles.git ~/.config/dotfiles
+git clone git@github.com:AntonioSertic23/dotfiles.git
+cd dotfiles
 ```
 
 ---
@@ -61,10 +62,10 @@ This will create or update symlinks for all configured items, linking them to th
 
 ---
 
-Clone Kitty themes:
+The `kitty-themes/` directory is ignored in this repository, so you need to clone it manually:
 
 ```bash
-git clone git@github.com:dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
+git clone git@github.com:dexpota/kitty-themes.git kitty/kitty-themes
 ```
 
 ---
