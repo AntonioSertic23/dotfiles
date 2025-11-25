@@ -2,6 +2,9 @@
 
 This repository contains my personal configuration files for **Hyprland**, **Waybar**, **Kitty**, and related tools on **Arch Linux**.
 
+A full manual for installing **Arch Linux + Windows 11 dual boot** is available in  
+`docs/arch_install.md` — useful if you want to recreate the same system setup.
+
 ## 📂 Contents
 
 ### 🪟 Hyprland
