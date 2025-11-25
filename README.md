@@ -23,9 +23,10 @@ This repository contains my personal configuration files for **Hyprland**, **Way
 
 ### ⚡ Scripts
 
-- `scripts/setup_symlinks.sh` – script to automatically create **symlinks** from dotfiles in this repository to `~/.config`.
-  - Works for both **files and directories**.
-  - Replaces existing symlinks if present.
+- `scripts/setup_symlinks.sh` – script to automatically create **symlinks** from the dotfiles in this repository to `$HOME/.config` and `$HOME`.
+  - Automatically detects the dotfiles directory by using the parent folder of the script.
+  - Works for both **directories and files**.
+  - Replaces existing **symlinks** if present.
 
 ---
 
@@ -47,13 +48,16 @@ git clone git@github.com:AntonioSertic23/dotfiles.git ~/.config/dotfiles
 
 ## 🛠️ Set up symlinks
 
-Run the setup script to link all configuration files and folders from your dotfiles to `~/.config`:
+Run the setup script:
 
 ```bash
-~/.config/dotfiles/scripts/setup_symlinks.sh
+./scripts/setup_symlinks.sh
 ```
 
-This ensures your configurations are properly linked and ready to use.
+This will create or update symlinks for all configured items, linking them to their correct destinations under:
+
+- \`~/.config/...\`
+- \`$HOME/...\`
 
 ---
 
@@ -79,10 +83,12 @@ You can browse available themes in the `kitty-themes` directory and switch them 
 
 ## 📝 Usage / Adding New Dotfiles
 
-1. Add a new file or folder to your `~/.config/dotfiles` repository.
-2. Add the new item to the `DOTFILES_ITEMS` array in `scripts/setup_symlinks.sh`.
-3. Run the script again to create the symlink:
+1. Add a new configuration folder or file to your dotfiles repository.
+2. Add the new item to the `SYMLINKS` associative array inside `scripts/setup_symlinks.sh`.
+3. Run the setup script again:
 
 ```bash
-~/.config/dotfiles/scripts/setup_symlinks.sh
+./scripts/setup_symlinks.sh
 ```
+
+This will automatically create the symlink for the new configuration.
